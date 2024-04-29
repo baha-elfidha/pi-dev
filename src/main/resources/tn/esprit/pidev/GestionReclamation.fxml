@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="494.0" prefWidth="683.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.pidev.controllers.GestionReclamationController">
+   <ImageView fitHeight="494.0" fitWidth="687.0" pickOnBounds="true">
+      <image>
+         <Image url="@rm222batch3-kul-13.jpg" />
+      </image>
+   </ImageView>
+
+    <MenuBar layoutX="14.0" layoutY="16.0">
+        <menus>
+            <Menu text="Reclamations">
+                <items>
+                    <MenuItem onAction="#addReclamationAction" text="Add Reclamation" />
+                    <MenuItem onAction="#editReclamationAction" text="Edit Reclamation" />
+                    <MenuItem onAction="#deleteReclamationAction" text="Delete Reclamation" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+
+    <TextField fx:id="Recherche" layoutX="139.0" layoutY="15.0" prefHeight="27.0" prefWidth="275.0" promptText="Recherche" />
+
+    <ComboBox fx:id="comboBox" layoutX="424.0" layoutY="14.0" onAction="#onComboBox" prefHeight="27.0" prefWidth="120.0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Sort by Description" />
+                <String fx:value="Sort by Subject" />
+                <String fx:value="Sort by Created At" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <Button layoutX="568.0" layoutY="15.0" onAction="#refreshListAction" prefHeight="25.0" prefWidth="103.0" text="Refresh List" />
+
+    <ListView fx:id="reclamationsListView" layoutX="14.0" layoutY="48.0" prefHeight="420.0" prefWidth="657.0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="48.0" />
+
+</AnchorPane>

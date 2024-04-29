@@ -1,0 +1,37 @@
+/* Set a base background color */
+.anchor-pane {
+    -fx-background-color: #e6e6e6;
+}
+
+/* Style for MenuBar */
+.menubar {
+    -fx-background-color: #333;
+}
+
+/* Style for Menu */
+.menu {
+    -fx-text-fill: white;
+}
+
+/* Style for TextField */
+.text-field {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #333;
+}
+
+/* Style for ComboBox */
+.combo-box {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #333;
+}
+
+/* Style for Button */
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+/* Style for ListView */
+.list-view {
+    -fx-background-color: #f9f9f9;
+}
